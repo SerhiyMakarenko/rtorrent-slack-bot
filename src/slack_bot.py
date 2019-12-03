@@ -37,7 +37,7 @@ def scheduler(execution_scheduler):
                     send_slack_message(torrent_name)
                     pending_torrents.remove(torrent)
             except xmlrpc.client.Fault:
-                print("Removing torrent with hash " + torrent + "from pending list, probably it was removed manually "
+                print("Removing torrent with hash " + torrent + " from pending list, probably it was deleted manually "
                                                                 "from rtorrent.")
                 pending_torrents.remove(torrent)
     execution_scheduler.enter(10, 1, scheduler, (execution_scheduler,))
