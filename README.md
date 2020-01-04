@@ -5,6 +5,15 @@ Simple Slack Bot for rtorrent
 Slack Bot communicate with rtorrent directly over SCGI wrapped to UNIX socket using `xmlrpc.client` from the standard Python library.
 Interface for SCGI communication over UNIX socket was originally written by [Roger Que](https://gist.github.com/query/899683).
 
+# Details
+Currently, the image supports the following CPU architectures:
+ - x86_64 (amd64);
+ - armhf (arm32v6);
+ - arm7l (arm32v6);
+ - aarch6 (arm64v8).
+
+This means that the image can be used on regular PC's with Intel CPU as well as on single-board computers like Raspberry Pi with ARM CPU.
+
 # Usage
 To run container you need to execute command listed below:
 ```
